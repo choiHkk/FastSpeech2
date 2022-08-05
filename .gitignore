@@ -47,8 +47,8 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+*.tar
 
-*.zip
 
 .ipynb_checkpoints/
 __pycache__/
