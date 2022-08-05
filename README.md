@@ -3,7 +3,8 @@
 2. 기존 오픈소스는 MFA기반 preprocessing을 진행한 상태에서 학습을 진행하지만 본 레포지토리에서는 alignment learning 기반 학습을 진행하고 preprocessing으로 인해 발생할 수 있는 디스크 용량 문제를 방지하기 위해 data_utils.py로부터 학습 데이터가 feeding됩니다.
 3. conda 환경으로 진행해도 무방하지만 본 레포지토리에서는 docker 환경만 제공합니다. 기본적으로 ubuntu에 docker, nvidia-docker가 설치되었다고 가정합니다.
 4. GPU, CUDA 종류에 따라 Dockerfile 상단 torch image 수정이 필요할 수도 있습니다.
-5. 별도의 pre-processing 과정은 필요하지 않지만, pitch와 energy의 max, min, mean, str 값을 다시 추출해야 한다면 pre-processing을 진행하셔야 합니다.
+5. preprocessing 단계에서는 학습에 필요한 transcript와 stats 정도만 추출하는 과정만 포함되어 있습니다.
+6. 그 외의 pre-processing 과정은 필요하지 않습니다.
 
 ## Dataset
 1. download dataset - https://www.kaggle.com/datasets/bryanpark/korean-single-speaker-speech-dataset
@@ -18,7 +19,7 @@
 ## Training
 1. `nvidia-docker run -it --name 'FastSpeech2' -v /path/to/FastSpeech2:/home/work/FastSpeech2 --ipc=host --privileged FastSpeech2:latest`
 2. `cd /home/work/FastSpeech2`
-3. (OPTIONAL) `python preprocess.py ./config/kss/preprocess.yaml`
+3. `python preprocess.py ./config/kss/preprocess.yaml`
 4. `python train.py -p ./config/kss/preprocess.yaml -m ./config/kss/model.yaml -t ./config/kss/train.yaml`
 12. arguments
   * -p : preprocess config path
