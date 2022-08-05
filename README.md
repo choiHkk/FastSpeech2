@@ -19,13 +19,16 @@
 ## Training
 1. `nvidia-docker run -it --name 'FastSpeech2' -v /path/to/FastSpeech2:/home/work/FastSpeech2 --ipc=host --privileged FastSpeech2:latest`
 2. `cd /home/work/FastSpeech2`
-3. `python preprocess.py ./config/kss/preprocess.yaml`
-4. `python train.py -p ./config/kss/preprocess.yaml -m ./config/kss/model.yaml -t ./config/kss/train.yaml`
-12. arguments
+3. `cd /home/work/FastSpeech2/hifigan`
+4. `unzip generator_universal.pth.tar.zip .`
+5. `cd /home/work/FastSpeech2`
+6. `python preprocess.py ./config/kss/preprocess.yaml`
+7. `python train.py -p ./config/kss/preprocess.yaml -m ./config/kss/model.yaml -t ./config/kss/train.yaml`
+8. arguments
   * -p : preprocess config path
   * -m : model config path
   * -t : train config path
-13. (OPTIONAL) `tensorboard --logdir=outdir/logdir`
+9. (OPTIONAL) `tensorboard --logdir=outdir/logdir`
 
 ## Tensorboard losses
 ![FastSpeech2-tensorboard-losses](https://user-images.githubusercontent.com/69423543/183047356-3fb819ee-dee1-40fb-9432-778a8b488202.png)
