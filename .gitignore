@@ -47,7 +47,7 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-*.tar
+
 *.zip
 
 .ipynb_checkpoints/
