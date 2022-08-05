@@ -4,7 +4,7 @@
 3. conda 환경으로 진행해도 무방하지만 본 레포지토리에서는 docker 환경만 제공합니다. 기본적으로 ubuntu에 docker, nvidia-docker가 설치되었다고 가정합니다.
 4. GPU, CUDA 종류에 따라 Dockerfile 상단 torch image 수정이 필요할 수도 있습니다.
 5. preprocessing 단계에서는 학습에 필요한 transcript와 stats 정도만 추출하는 과정만 포함되어 있습니다.
-6. 그 외의 pre-processing 과정은 필요하지 않습니다.
+6. 그 외의 다른 preprocessing 과정은 필요하지 않습니다.
 
 ## Dataset
 1. download dataset - https://www.kaggle.com/datasets/bryanpark/korean-single-speaker-speech-dataset
