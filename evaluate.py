@@ -13,7 +13,7 @@ from model import FastSpeech2Loss
 from data_utils import AudioTextDataset, AudioTextCollate, DataLoader
 
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def evaluate(model, step, configs, logger=None, vocoder=None):
