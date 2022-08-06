@@ -18,3 +18,4 @@ natsort
 easydict
 g2pk
 yaml
+pyworld
