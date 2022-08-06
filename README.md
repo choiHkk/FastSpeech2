@@ -22,13 +22,14 @@
 3. `cd /home/work/FastSpeech2/hifigan`
 4. `unzip generator_universal.pth.tar.zip .`
 5. `cd /home/work/FastSpeech2`
-6. `python preprocess.py ./config/kss/preprocess.yaml`
-7. `python train.py -p ./config/kss/preprocess.yaml -m ./config/kss/model.yaml -t ./config/kss/train.yaml`
-8. arguments
+6. `ln -s /home/work/FastSpeech2/data/dataset/kss`
+7. `python preprocess.py ./config/kss/preprocess.yaml`
+8. `python train.py -p ./config/kss/preprocess.yaml -m ./config/kss/model.yaml -t ./config/kss/train.yaml`
+9. arguments
   * -p : preprocess config path
   * -m : model config path
   * -t : train config path
-9. (OPTIONAL) `tensorboard --logdir=outdir/logdir`
+10. (OPTIONAL) `tensorboard --logdir=outdir/logdir`
 
 ## Tensorboard losses
 ![FastSpeech2-tensorboard-losses](https://user-images.githubusercontent.com/69423543/183047356-3fb819ee-dee1-40fb-9432-778a8b488202.png)
